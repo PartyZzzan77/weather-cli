@@ -15,5 +15,9 @@
     "cli"
   ],
   "author": "PartyZzzan77",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.11.15",
+    "chalk": "^5.2.0"
+  }
 }
