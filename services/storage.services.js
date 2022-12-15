@@ -19,8 +19,18 @@ export const saveKeyValue = async (token) => {
     const result = await promises.readFile(file);
     data = JSON.parse(result);
   }
-  
+
   data.token = token;
 
   await promises.writeFile(file, JSON.stringify(data));
+};
+
+export const getKeyValue = async (key) => {
+  if (await isExist(file)) {
+    const data = JSON.parse(await promises.readFile(file, 'utf-8'));
+
+    return data[key];
+  }
+
+  return undefined;
 };
