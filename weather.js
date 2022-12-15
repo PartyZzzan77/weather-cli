@@ -1,9 +1,7 @@
 #!usr/bin/env node
-
 import { getForecast } from './helpers/getForecast.js';
 import { getArgs } from './helpers/getArgs.js';
 import { setToken } from './helpers/setToken.js';
-
 import { printHelp } from './services/log.services.js';
 import { setCity } from './helpers/setCity.js';
 import { getKeyValue } from './services/storage.services.js';
