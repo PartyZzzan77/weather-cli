@@ -12,7 +12,7 @@ export const isExist = async (path) => {
   }
 };
 
-export const saveKeyValue = async (token) => {
+export const saveKeyValue = async (key, value) => {
   let data = {};
 
   if (await isExist(file)) {
@@ -20,7 +20,7 @@ export const saveKeyValue = async (token) => {
     data = JSON.parse(result);
   }
 
-  data.token = token;
+  data[key] = value;
 
   await promises.writeFile(file, JSON.stringify(data));
 };

@@ -1,15 +1,15 @@
 import { printError, printSuccess } from '../services/log.services.js';
 import { saveKeyValue } from '../services/storage.services.js';
 
-export const setToken = async (token) => {
-  if (!token.length) {
-    printError('Token not transferred');
+export const setCity = async (city) => {
+  if (!city.length) {
+    printError('Incorrect city specified');
     return;
   }
 
   try {
-    await saveKeyValue('token', token);
-    printSuccess('Token written successfully');
+    await saveKeyValue('city', city);
+    printSuccess('City written successfully');
   } catch (e) {
     printError(e.message);
   }
