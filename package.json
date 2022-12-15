@@ -8,7 +8,7 @@
     "weather": "weather.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "TOKEN=b932fa349182a0c23be889f92c5bb337 CITY=moscow node weather.js  "
   },
   "keywords": [
     "weather",
